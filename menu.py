@@ -22,7 +22,8 @@ def main_menu():
 
 
 def chef_menu():
-    print("Chef Menu")
+    print("What kind of food do you wish to cook?")
+
 
 
 def recipe_collector():
