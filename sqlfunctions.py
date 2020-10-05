@@ -4,8 +4,8 @@ import random
 from config import config
 
 
+#First creates the Recipe and then inserts it into the database
 def insert_recipe(x):
-    #First creates the Recipe and then inserts it into the database
 
     recipe = recipes.create_recipe(x)
     print(recipe)
@@ -31,8 +31,9 @@ def insert_recipe(x):
     insertion(recipe.category, recipe.name, recipe.time, recipe.link)
 
 
+#Picks a random recipe from the database based on the choosen category
 def random_recipe(x):
-    #Picks a random recipe from the database based on the choosen category
+
 
     conn = None
     try:
@@ -52,8 +53,8 @@ def random_recipe(x):
             conn.close()
 
 
+#Gets all the recipes from the database
 def all_recipes():
-    #Gets all the recipes from the database
     
     conn = None
     try:
@@ -64,7 +65,7 @@ def all_recipes():
 
         cur.execute('SELECT recipe_name, recipe_time, recipe_link FROM public.recipes')
         select = cur.fetchall()
-        print(" - Recipe name - Estimated time - Recipe Link")
+        print(" - Recipe name - Estimated time - Recipe Link -")
         for recipe in select:
             print(recipe)
 
