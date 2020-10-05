@@ -34,7 +34,6 @@ def insert_recipe(x):
 #Picks a random recipe from the database based on the choosen category
 def random_recipe(x):
 
-
     conn = None
     try:
         params = config()
