@@ -1,0 +1,16 @@
+29 Sep,
+
+Skapade dom olika filerna jag tror att jag behöver.
+Beslutat mig för att försöka få in allting i en databas istället, för att kunna få koppling mellan python och databasen.
+Så installerade jag psycopg2 via powershell.
+skapade en test databas i postgresql. Där jag kommer sitta och leka med olika sätt/alternativ.
+Valde att ta en tidigare version av postgresql (9.6) då den versionen fungerar på rasperrypi.
+Tanken är att vidare ta det här och flytta över det till min Pi där hemma så jag kan komma åt den hela tiden.
+I vidareutvecklingen så skall jag även försöka få till en app i telefonen, hade jag önskat så skulle den kunna scanna nätverket.
+känna av när jag kommer hem och skicka en notis till min telefon där den skickar med ett recept på vad jag skall laga ikväll.
+
+
+5 Okt,
+
+Slopade steg för steg idén för tillfället, ställde till det med min databas en del.
+Skall se om jag kan få till det på ett schysst sätt efteråt.

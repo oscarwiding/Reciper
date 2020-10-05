@@ -15,7 +15,7 @@ Menu in diffrent python file. if questions to see what option the user chooses
 	-	sub category (sub-class)
 	-	Estimated time
 	-	link yes or no?
-	-	Step 1, 2, 3 untill you enter 0
+
 	
 3. Show all the recipes
 	-	List the categories

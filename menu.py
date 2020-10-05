@@ -42,7 +42,7 @@ def chef_menu():
         if not choice.isdigit():
             print("You can only enter numbers, ")
         elif int(choice) == 1:
-            sql.random_recipe(2)
+            sql.random_recipe(1)
             main_menu()
             selected = True
         elif int(choice) == 2:
@@ -102,3 +102,5 @@ def recipe_collector():
 
 def all_menu():
     print("All the recipes")
+    sql.all_recipes()
+    main_menu()
