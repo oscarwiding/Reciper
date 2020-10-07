@@ -7,7 +7,6 @@ from config import config
 #First creates the Recipe and then inserts it into the database
 def insert_recipe(x):
     recipe = recipes.create_recipe(x)
-    print(recipe)
 
     def insertion(category_id, name, time, link):
         conn = None
@@ -84,7 +83,7 @@ def get_category():
         select = cur.fetchall()
         categories = []
         for category in select:
-            categories.append(category)
+            categories.append(category[0])
         cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)

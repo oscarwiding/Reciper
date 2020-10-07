@@ -1,4 +1,4 @@
-Welcome home popup messeage
+Welcome home popup message
 
 Menu in diffrent python file. if questions to see what option the user chooses
 
