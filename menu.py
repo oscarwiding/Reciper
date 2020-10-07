@@ -30,6 +30,11 @@ def main_menu():
 
 def chef_menu():
     print("What kind of food do you wish to cook?")
+    categories = sql.get_category()
+    i = 1
+    for category in categories:
+        print(f"{i}. {category}")
+        i += 1
     print("1. Dinner")
     print("2. Dessert")
     print("3. Entrees")

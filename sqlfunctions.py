@@ -6,7 +6,6 @@ from config import config
 
 #First creates the Recipe and then inserts it into the database
 def insert_recipe(x):
-
     recipe = recipes.create_recipe(x)
     print(recipe)
 
@@ -54,11 +53,9 @@ def random_recipe(x):
 
 #Gets all the recipes from the database
 def all_recipes():
-    
     conn = None
     try:
         params = config()
-
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
 
@@ -75,3 +72,23 @@ def all_recipes():
         if conn is not None:
             conn.close()
 
+
+#Get the categories and return them in a list
+def get_category():
+    conn = None
+    try:
+        params = config()
+        conn = psycopg2.connect(**params)
+        cur = conn.cursor()
+        cur.execute('SELECT "Category_name" FROM public.main_category')
+        select = cur.fetchall()
+        categories = []
+        for category in select:
+            categories.append(category)
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+    finally:
+        if conn is not None:
+            conn.close()
+    return categories
