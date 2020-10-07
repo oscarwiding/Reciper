@@ -43,7 +43,7 @@ def chef_menu():
         choice = input("")
         if not choice.isdigit():
             print("You can only enter numbers, ")
-        elif 0 < int(choice) < len(categories):
+        elif 0 < int(choice) < len(categories)+1:
             choice.isdigit()
             sql.random_recipe(choice)
             main_menu()
@@ -59,37 +59,30 @@ def chef_menu():
 def recipe_collector():
     print("recipe Collector")
     print("What type of recipe do you want to add")
-    print("1. Dinner")
-    print("2. Dessert")
-    print("3. Entrees")
-    print("4. Preserves")
-    print("0. Go back")
+    categories = sql.get_category()
+
+    i = 1
+    for category in categories:
+        print(f"{i}. {category}")
+        i += 1
+    print("0. Exit")
+
     selected = False
     while not selected:
         choice = input("")
         if not choice.isdigit():
             print("You can only enter numbers, ")
-        elif int(choice) == 1:
-            sql.insert_recipe(2)
-            main_menu()
-            selected = True
-        elif int(choice) == 2:
-            sql.insert_recipe(2)
-            main_menu()
-            selected = True
-        elif int(choice) == 3:
-            sql.insert_recipe(3)
-            main_menu()
-            selected = True
-        elif int(choice) == 4:
-            sql.insert_recipe(4)
+        elif 0 < int(choice) < len(categories)+1:
+            choice.isdigit()
+            sql.insert_recipe(choice)
             main_menu()
             selected = True
         elif int(choice) == 0:
+            choice.isdigit()
             main_menu()
             selected = True
         else:
-            print("Oops, that don't seem to be an option. \npick between 1, 2, 3, 4 and 0")
+            print(f"only enter a number from 0 to {len(categories)}")
 
 
 def all_menu():
