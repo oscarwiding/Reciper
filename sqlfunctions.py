@@ -79,6 +79,7 @@ def get_category():
         params = config()
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
+
         cur.execute('SELECT "Category_name" FROM public.main_category')
         select = cur.fetchall()
         categories = []
