@@ -24,3 +24,9 @@ Fixade så det gick att ha oändligt med kategorier, samt att den hämtar katego
 21 Okt,
 
 Sitter och tittar på lösningar för Flask för att kunna presentera texten och information på ett snygg sätt.
+
+
+27 Okt,
+
+Unit testen krånglar när jag försöker få den att mocka flera stycken inputs i samma funktion.
+Men skickar jag in ett numeriskt värde så kan det gå igenom alla inputs, testet funkar fint.
